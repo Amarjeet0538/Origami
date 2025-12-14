@@ -41,23 +41,29 @@ const ChatContainer = ({selectedUser, setselectedUser}) => {
                     <img src={msg.image}  className={`max-w-[350px] border border-grey-700 rounded-lg cursor-pointer mb-8 ${msg.senderId === '680f50e4f10f3cd28382ecf9' ? 'bg-pink-900/70 rounded-bl-none' : 'bg-yellow-800/90 rounded-br-none'}`}/>
                   )
                   : (
+                    <div className=''>
                       <p
                         className={`p-2 max-w-[280px] md:text-[18px] font-light rounded-lg mb-8 break-all  text-white
                           ${msg.senderId === '680f50e4f10f3cd28382ecf9' ? 'bg-pink-900/70 rounded-bl-none' : 'bg-yellow-800/90 rounded-br-none'}
                         `}
                       >
                         {msg.text}
+
                       </p>
+
+                      </div>
                   )}
 
                   <div className='text-center text-m'>
                     <img src={msg.senderId === '680f50e4f10f3cd28382ecf9' ? assets.avatar_icon : assets.profile_martin} alt=""  className='w-7 rounded-full'/>
-
-                    <p className='pt-3  text-grey-500'>{formatMessageTime(msg.createdAt)}</p>
+                    <p className='pt-3  text-grey-500'>
+                      {formatMessageTime(msg.createdAt)}
+                    </p>
                   </div>
               </div>
             ))
           }
+
           <div ref={scrollEnd}></div>
         </div>
 
