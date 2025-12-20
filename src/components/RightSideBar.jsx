@@ -3,7 +3,7 @@ import assets from '../assets/assets'
 
 const RightSideBar = ({selectedUser}) => {
   return selectedUser && (
-    <div className={`bg-yellow-800 text-white w-full relative
+    <div className={`bg-yellow-800 text-white w-full relative flex flex-col items-center
     ${selectedUser ? "max-md:hidden" : ""}`}>
       <div className="pt-16 flex flex-col items-center gap-2 text-xs font-light mx-auto">
         <img src={selectedUser ?.profilePic || assets.avatar_icon} alt='' className='w-20 aspect-[1/1] rounded-full'/>
